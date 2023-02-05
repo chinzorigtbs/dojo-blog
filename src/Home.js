@@ -7,13 +7,13 @@ export default function Home() {
     data: blogs,
     isLoading,
     error,
-  } = useFetch("http://localhost:8000/blogs");
+  } = useFetch("http://localhost:1337/blogs");
 
   return (
     <div className="home">
       {error && <div>{error}</div>}
       {isLoading && <div>Loading ...</div>}
-      {blogs && <BlogList blogs={blogs} title="All Blogs!" />}
+      {blogs && <BlogList blogs={blogs} />}
     </div>
   );
 }
