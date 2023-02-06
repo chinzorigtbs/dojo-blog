@@ -23,7 +23,6 @@ export default function useFetch(url) {
         })
         .catch((e) => {
           if (e.name === "AbortError") {
-            console.log("Aborted");
           } else {
             setError(e.message);
             setIsLoading(false);
